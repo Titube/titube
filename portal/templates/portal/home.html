@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Css menu de navegacao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style2.css" %}">
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+<body>
+
+    <div class="header-wrap">
+        <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Portais</a></li>
+            <li class="last-option"><a href="#">Adm</a></li>   
+            <li class="icon"><a href="#">&#9776;</a></li>
+        </ul>        
+    </div>
+
+    <div class="main-wrap">
+     
+
+
+        <div class="main-content">
+            <input type="text" name="search" placeholder="categoria">
+            <div class="category-wrap">
+                {% for vid in all_videos %}
+                    <div class="card">
+                        <a class="img-card" href="#">
+                            <img src="{{ vid.imagem.url }}">
+                        </a>
+                        
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="#">
+                                    {{ vid.titulo }}
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                {% endfor %}
+               
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
