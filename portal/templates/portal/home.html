@@ -28,27 +28,32 @@
     <div class="main-wrap">
      
 
-
+        <!--Fazer widget lateral de categoria-->
         <div class="main-content">
             <input type="text" name="search" placeholder="categoria">
-            <div class="category-wrap">
-                {% for vid in all_videos %}
-                    <div class="card">
-                        <a class="img-card" href="#">
-                            <img src="{{ vid.imagem.url }}">
-                        </a>
+            {% for categoria in categorias %}
+
+                <div class="category-wrap">
+
+                    {% for vid in categoria.video_set.all %}
+                        <div class="card">
+                            <a class="img-card" href="#">
+                                <img src="{{ vid.imagem.url }}">
+                            </a>
                         
-                        <div class="card-content">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    {{ vid.titulo }}
-                                </a>
-                            </h4>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="#">
+                                    lalala
+                                    </a>
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
-               
-            </div>
+                    {% endfor %}
+
+                </div>
+
+            {% endfor %}
 
         </div>
 
