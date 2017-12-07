@@ -10,18 +10,15 @@ from portal.models import Categoria, Video
 
 def home(request):
 
-	categorias = Categoria.objects.filter(titulo__in=("Windows","Acompanhamento de Sessão"))
+	#categorias = Categoria.objects.filter(titulo__in=("Windows","Acompanhamento de Sessão"))
 
-	#categorias = Categoria.objects.all()
-	#categoria_3 = Categoria.objects.get(pk=3)
-	categorias = Video.objects.all()	
+	categorias = Categoria.objects.filter(titulo__in=("Windows","Acompanhamento de Sessão"))	
 
 	context = {
-			"categorias": categorias,
-			"all_videos": categorias #categoria_3.video_set.all()
+			"categorias":categorias
 	}
 
-	template  = loader.get_template('portal/home.html')
+	template  = loader.get_template('portal/carrossel.html')
 	return HttpResponse(template.render(context, request))
 
 
