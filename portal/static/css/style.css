@@ -89,21 +89,22 @@ input{
 
 
 .category-wrap{ 
-	
+	overflow: hidden;
 	border: 2px solid green;
 	/*width: 100%;   TALVEZ NAO PRECISE DISSO AQUI*/
+	height: 228px;
+	width: 265px;
 	margin: auto;
 	margin-top: 20px;
-	text-align: center;
+	/*text-align: center;*/  /*centraliza os cards, que por estarem in-line sao palavras*/
 
 }
 
 .card {
-	overflow: hidden;
     word-break: normal;
     width: 265px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    /*margin-left: 10px;*/
+    /*margin-bottom: 10px;*/
     line-height: 1.42857143;
     background-color: #fff;
     border-radius: 2px;
