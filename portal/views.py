@@ -18,7 +18,7 @@ def home(request):
 			"categorias":categorias
 	}
 
-	template  = loader.get_template('portal/carrossel.html')
+	template  = loader.get_template('portal/home.html')
 	return HttpResponse(template.render(context, request))
 
 
