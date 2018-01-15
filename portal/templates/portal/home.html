@@ -34,7 +34,7 @@
             {% for categoria in categorias %}
 
                 <div class="category-wrap">
-
+                    <h2 class="category-tittle">{{ categoria.titulo }}</h2>
                     {% for vid in categoria.video_set.all %}
                         <div class="card">
                             <a class="img-card" href="#">
@@ -50,29 +50,35 @@
                             </div>
                         </div>
                     {% endfor %}
-
+                <p>BOTAO</p>
                 </div>
 
             {% endfor %}
 
         </div>
 
-
     </div>
 
-    <div class="carrossel">
 
-    	<div class="item1"></div>
-    	<div class="item2"></div>
-    	<div class="item3"></div>
-    	<div class="item4"></div>
-    	<div class="item5"></div>
-    	<div class="item6"></div>
-    	<div class="item7"></div>
-    	<div class="item8"></div>
-    	<div class="item9"></div>
+    <script type="text/javascript">
 
-    </div>
+        function hide_first_three(value)
+        {
+            console.log(value)
+        }
+
+
+        function get_all_category_wrappers(){
+          var all_category_wrappers = document.querySelectorAll(".category-wrap")
+          for(i=0; i< all_category_wrappers.length; i++){
+              var wrap = all_category_wrappers[i]
+              var all_child_cards = wrap.querySelectorAll(".card")
+          }
+        }
+
+        get_all_category_wrappers()
+
+    </script>
 
 </body>
 </html>
